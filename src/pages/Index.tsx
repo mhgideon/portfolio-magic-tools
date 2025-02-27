@@ -1,7 +1,7 @@
 
 import React from "react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { ChartLine, Robot, PieChart } from "lucide-react";
+import { ChartLine, Bot, PieChart } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import { Progress } from "@/components/ui/progress";
 
@@ -60,7 +60,7 @@ const Index = () => {
       id: 2,
       title: "Automated Trading Bots",
       description: "Let our AI-powered bots trade for you. Set your risk tolerance and investment goals, then relax.",
-      icon: Robot,
+      icon: Bot,
       popularityPercentage: 80
     },
     {
@@ -117,7 +117,7 @@ const Index = () => {
             
             <div className="bg-slate-50 dark:bg-slate-700 p-6 rounded-lg text-center">
               <div className="bg-emerald-100 dark:bg-emerald-900 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Robot className="h-6 w-6 text-emerald-500" />
+                <Bot className="h-6 w-6 text-emerald-500" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Advanced Technology</h3>
               <p className="text-slate-600 dark:text-slate-300">
