@@ -141,7 +141,7 @@ const Index = () => {
       <div className="py-16 px-4 sm:px-6 bg-emerald-500">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
-            Ready to Start Your Financial Journey?
+            A
           </h2>
           <p className="text-emerald-100 mb-8 text-lg">
             Join thousands of successful traders who have transformed their financial future with our proven methods.
@@ -152,7 +152,7 @@ const Index = () => {
         </div>
       </div>
 
-      {/* Footer - Updated to remove links and only show contact and copyright */}
+      {/* Footer */}
       <footer className="bg-slate-800 text-slate-300 py-12 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-8">
