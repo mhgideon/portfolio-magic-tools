@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { ChartLine, Bot, PieChart } from "lucide-react";
@@ -157,10 +156,10 @@ const Index = () => {
       <footer className="bg-slate-800 text-slate-300 py-12 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-8">
-            <h3 className="text-xl font-bold text-white mb-6">Contact Us</h3>
+            <h3 className="text-xl font-bold text-white mb-6">Get in Touch</h3>
             <p className="text-slate-400 mb-2">support@valueflowtrading.com</p>
-            <p className="text-slate-400 mb-2">+1 (555) 123-4567</p>
-            <p className="text-slate-400">123 Trading St, New York, NY</p>
+            <p className="text-slate-400 mb-2">+234 803 123 4567</p>
+            <p className="text-slate-400">15 Adetokunbo Ademola Crescent, Wuse II, Abuja</p>
           </div>
           
           <div className="pt-8 border-t border-slate-700 text-slate-400">
