@@ -1,8 +1,10 @@
-import React from "react";
+
+import React, { useState } from "react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { ChartLine, Bot, PieChart } from "lucide-react";
+import { ChartLine, Bot, PieChart, Mail } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import { Progress } from "@/components/ui/progress";
+import { toast } from "sonner";
 
 const ProductCard = ({ 
   title, 
@@ -47,6 +49,9 @@ const ProductCard = ({
 };
 
 const Index = () => {
+  const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const products = [
     {
       id: 1,
@@ -70,6 +75,18 @@ const Index = () => {
       popularityPercentage: 70
     }
   ];
+
+  const handleNewsletterSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    // Simulate API call
+    setTimeout(() => {
+      setIsSubmitting(false);
+      setEmail("");
+      toast.success("Thank you for subscribing to our newsletter!");
+    }, 1000);
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
@@ -137,18 +154,37 @@ const Index = () => {
         </div>
       </div>
 
-      {/* CTA Section */}
+      {/* Newsletter Signup Section */}
       <div className="py-16 px-4 sm:px-6 bg-emerald-500">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            A
-          </h2>
-          <p className="text-emerald-100 mb-8 text-lg">
-            Join thousands of successful traders who have transformed their financial future with our proven methods.
-          </p>
-          <button className="bg-white text-emerald-600 px-8 py-3 rounded-md font-medium text-lg hover:bg-emerald-50 transition-colors">
-            Get Started Today
-          </button>
+          <div className="bg-white dark:bg-slate-800 rounded-lg p-8 shadow-lg">
+            <div className="flex items-center justify-center mb-6">
+              <Mail className="h-8 w-8 text-emerald-500 mr-3" />
+              <h2 className="text-3xl font-bold text-slate-800 dark:text-white">
+                Subscribe to Our Newsletter
+              </h2>
+            </div>
+            <p className="text-slate-600 dark:text-slate-300 mb-8">
+              Stay updated with our latest market insights, trading tips, and exclusive offers.
+            </p>
+            <form onSubmit={handleNewsletterSubmit} className="flex flex-col sm:flex-row gap-4">
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Your email address"
+                required
+                className="flex-grow px-4 py-3 rounded-md border border-slate-300 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              />
+              <button 
+                type="submit" 
+                disabled={isSubmitting}
+                className="bg-emerald-600 hover:bg-emerald-700 text-white font-medium px-6 py-3 rounded-md transition-colors disabled:opacity-70 disabled:cursor-not-allowed"
+              >
+                {isSubmitting ? "Subscribing..." : "Subscribe"}
+              </button>
+            </form>
+          </div>
         </div>
       </div>
 
