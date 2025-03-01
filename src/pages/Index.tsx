@@ -153,46 +153,19 @@ const Index = () => {
         </div>
       </div>
 
-      {/* Footer */}
+      {/* Footer - Updated to remove links and only show contact and copyright */}
       <footer className="bg-slate-800 text-slate-300 py-12 px-4 sm:px-6">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div>
-            <h3 className="text-xl font-bold text-white mb-4">Financial Training</h3>
-            <p className="text-slate-400">
-              Your partner in financial education and wealth building since 2015.
-            </p>
+        <div className="max-w-7xl mx-auto text-center">
+          <div className="mb-8">
+            <h3 className="text-xl font-bold text-white mb-6">Contact Us</h3>
+            <p className="text-slate-400 mb-2">support@valueflowtrading.com</p>
+            <p className="text-slate-400 mb-2">+1 (555) 123-4567</p>
+            <p className="text-slate-400">123 Trading St, New York, NY</p>
           </div>
           
-          <div>
-            <h4 className="text-white font-medium mb-4">Products</h4>
-            <ul className="space-y-2">
-              <li><a href="#" className="hover:text-emerald-400 transition-colors">Learn to Trade</a></li>
-              <li><a href="#" className="hover:text-emerald-400 transition-colors">Automated Trading Bots</a></li>
-              <li><a href="#" className="hover:text-emerald-400 transition-colors">Diversified Portfolio</a></li>
-            </ul>
+          <div className="pt-8 border-t border-slate-700 text-slate-400">
+            <p>© 2023 Value Flow Trading LTD. All rights reserved.</p>
           </div>
-          
-          <div>
-            <h4 className="text-white font-medium mb-4">Resources</h4>
-            <ul className="space-y-2">
-              <li><a href="#" className="hover:text-emerald-400 transition-colors">Blog</a></li>
-              <li><a href="#" className="hover:text-emerald-400 transition-colors">Market Analysis</a></li>
-              <li><a href="#" className="hover:text-emerald-400 transition-colors">Tutorials</a></li>
-            </ul>
-          </div>
-          
-          <div>
-            <h4 className="text-white font-medium mb-4">Contact</h4>
-            <ul className="space-y-2">
-              <li>support@financialtraining.com</li>
-              <li>+1 (555) 123-4567</li>
-              <li>123 Trading St, New York, NY</li>
-            </ul>
-          </div>
-        </div>
-        
-        <div className="max-w-7xl mx-auto mt-12 pt-8 border-t border-slate-700 text-center text-slate-400">
-          <p>© 2023 Financial Training. All rights reserved.</p>
         </div>
       </footer>
     </div>
